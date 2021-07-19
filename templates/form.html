@@ -1,0 +1,18 @@
+<h2>Программа по НЕПРОФЕССИОНАЛЬНОМУ подбору авто!</h2>
+<h2>Коэффициент крутости высчитывается по шкале ИВАНА МЕЛЬНИКОВА</h2>
+<h2>Ответьте на каждый из вопросов и не оставляйте поля пустыми!</h2>
+
+<form action="/data" method = "POST">
+    <h2>Лошадиные силы:</h2>
+        <p>От: <input type = "text" name = "min_hp"/></p>
+        <p>До:<input type = "text" name = "max_hp"/></p>
+    <h2>Объем двигателя (через точку):</h2>
+        <p>От: <input type = "text" name = "min_engine"/></p>
+        <p>До:<input type = "text" name = "max_engine"/></p>
+    <h2>Цена:</h2>
+        <p>От: <input type = "text" name = "min_price"/></p>
+        <p>До:<input type = "text" name = "max_price"/></p>
+    <h2>Минимальный коэффициент крутости:</h2>
+        <p><input type = "text" name = "min_coolness"/></p>
+    <p><input type="submit" value="Найти машину!"></p>
+</form>

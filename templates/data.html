@@ -1,0 +1,12 @@
+{% for key, value in df.iterrows() %}
+    {% if ((value['Engine'][:3] | float) >= (request.form['min_engine'] | float)
+            and (value['Engine'][:3] | float) <= (request.form['max_engine'] | float)
+            and (value['Engine'][8:11] | int) >= (request.form["min_hp"] | int)
+            and (value['Engine'][8:11] | int) <= (request.form["max_hp"] | int)
+            and (value['Price'] | int) >= (request.form["min_price"] | int)
+            and (value['Price'] | int) <= (request.form["max_price"] | int)
+            and (value['Cool'] | int) >= (request.form['min_coolness'] | int)) %}
+    <option value="{{ value['Name'] }}">{{ value['Name'] }}</option>
+    <option value="{{ value['Link'] }}">{{ value['Link'] }}</option>
+{% endif %}
+{% endfor %}
